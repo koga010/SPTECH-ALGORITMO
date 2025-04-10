@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bilhete unico</title>
+</head>
+<body>
+    <p>Qual o valor da passagem?</p>
+    <input id="input_passagem" type="text">
+    <p>Quantas viagens fará no mês?</p>
+    <input id="input_viagens" type="text"> <br>
+    <button onclick="calcular()">Ver economia</button>
+</body>
+</html>
+<script>
+    function calcular() {
+        var passagem = Number(input_passagem.value)
+        var dividir = passagem / 2
+        var viagens = Number(input_viagens.value)
+        var multiplicacao = dividir * viagens
+        alert("Você economizará R$" + multiplicacao + " por mês"  )
+    }
+</script>

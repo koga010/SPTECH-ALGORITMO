@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dragon ball</title>
+</head>
+<body>
+    
+    Insira o ki base do guerreiro <br>
+    <input id="input_kibase" type="text"> <br>
+    Transformar em... <br>
+    <button onclick="ssj()">SSJ</button> 
+    <button onclick="ssj2()">SSJ2</button>
+    <button onclick="ssj3()">SSJ3</button> <br>
+
+    <div id="div_resultado">
+        <!--Após se transformar em X, o ki desse Sayajin passa a ser de Y-->
+    </div>
+
+</body>
+</html>
+
+<script>
+    function ssj() {
+        var ki = Number(input_kibase.value)
+        var ssj = ki * 50
+        div_resultado.innerHTML = `Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${ssj}`
+    }
+    function ssj2() {
+        var ki = Number(input_kibase.value)
+        var ssj2 = ki * 100
+        div_resultado.innerHTML = `Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${ssj2}`
+    }
+    function ssj3() {
+        var ki = Number(input_kibase.value)
+        var ssj3 = ki * 200
+        div_resultado.innerHTML = `Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${ssj3}`
+    }
+</script>

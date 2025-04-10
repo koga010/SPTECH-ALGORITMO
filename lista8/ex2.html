@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Preferências de Compras</title>
+</head>
+<body>
+    Insira o tamanho da tela do celular <br>
+    <input type="text" id="input_tamanho"> <br><br>
+    Insira a cor do celular <br>
+    <select name="" id="select_cor">
+        <option value="preto">preto</option>
+        <option value="prata">prata</option>
+        <option value="azul">azul</option>
+        <option value="vermelho">vermelho</option> 
+    </select> <br>
+    <button onclick="verificar()">Será que ele gosta?</button>
+
+    <div id="div_mensagem"></div> 
+</body>
+</html>
+
+<script>
+    function verificar() {
+        var tamanho = Number(input_tamanho.value)
+        var cor = select_cor.value
+
+        if (tamanho >= 6.5 && (cor == 'preto' || cor == 'prata')) {
+            div_mensagem.innerHTML = `<img src="https://marketingdigital.com.br/wp-content/uploads/emoji-feliz.jpg" alt="">`
+        } else {
+            div_mensagem.innerHTML = `<img src="https://img.elo7.com.br/product/zoom/1B64B61/espelho-decorativo-emoji-triste-30x30cm-espelho.jpg" alt="">`
+        }
+    }
+</script>

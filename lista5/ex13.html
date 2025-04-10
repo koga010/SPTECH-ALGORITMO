@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pokemon</title>
+</head>
+<body>
+    Escolha um Pokemon <br>
+    <input type="text" id="input_pokemon"> <br><br>
+    <button onclick="escolher()">Escolher Pokémon</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function escolher() {
+        var pokemon = input_pokemon.value
+
+        if(pokemon == "bulbasaur") {
+            div_mensagem.innerHTML = `<img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png" alt="">`
+        } else if (pokemon == "charmander") {
+            div_mensagem.innerHTML = `<img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/004.png" alt="">`
+        } else if (pokemon == "squirtle") {
+            div_mensagem.innerHTML = `<img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/007.png" alt="">`
+        } else {
+            alert(`Pokémon não reconhecido`)
+        }
+    }
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saldo2</title>
+</head>
+<body>
+    
+    Insira o valor da ser depositado ou retirado <br>
+    <input id="input_valor" type="text">
+    <button onclick="incrementar()">Depositar</button>
+    <button onclick="decrementar()">Retirar</button>
+
+    <div id="div_saldo">O saldo está em: 0</div>
+
+</body>
+</html>
+
+<script>
+    var saldo = 0
+
+    function incrementar() {
+        var valor = Number(input_valor.value)
+        saldo = saldo + valor
+        div_saldo.innerHTML = "O saldo está em: " + saldo
+        alert("Depósito de R$" + valor + " efetuado! Saldo atual: R$" + saldo)
+    }
+    function decrementar() {
+        var valor = Number(input_valor.value)
+        saldo = saldo - valor
+        div_saldo.innerHTML = "O saldo está em: " + saldo
+        alert("Retirada de R$" + valor + " efetuada! Saldo atual: R$" + saldo)
+    }
+</script>

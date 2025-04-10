@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mercadinho</title>
+</head>
+<body>
+    Insira o nome do produto <br>
+    <input type="text" id="input_produto"> <br><br>
+    Insira a quantidade do produto no estoque <br>
+    <input type="text" id="input_qtd"> <br><br>
+    <button onclick="verificar()">Verificar estoque</button>
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    function verificar() {
+        var produto = input_produto.value
+        var qtd = Number(input_qtd.value)
+        var diferenca = qtd - 80
+        var diferenca2 = 80 - qtd
+
+        if(qtd > 80) {
+            div_mensagem.innerHTML = `<b style="color:red">Opa, já existem ${produto} demais em seu estoque faça uma promoção de ${diferenca} ${produto}`
+        }
+        if(qtd == 80) {
+            div_mensagem.innerHTML = `<b><i style="color:green">Seu estoque tem a quantidade ideal deste produto não será necessário a compra</i></b>`
+        }
+        if(qtd < 80) {
+            div_mensagem.innerHTML = `<u style="color:blue">Será necessário a compra de ${diferenca2} ${produto} para alcançar a quantidade para a semana`
+        }
+    }
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mercado</title>
+</head>
+<body>
+    Insira a quantidade de chocolates <br>
+    <input type="text" id="input_qtd"> <br><br>
+    <button onclick="compra()">Compra</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function compra() {
+        var qtd = Number(input_qtd.value)
+        var calculo = qtd * 3
+        var desconto = qtd * 2.50
+
+        if(qtd >= 12) {
+            div_mensagem.innerHTML = `o valor da sua compra foi de ${desconto}`
+        } else {
+            div_mensagem.innerHTML = `o valor da sua compra foi de ${calculo}`
+        }
+    }
+</script>

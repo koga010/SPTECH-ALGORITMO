@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dragon ball</title>
+</head>
+<body>
+    <p>Qual nome do guerreiro?</p>
+    <input id="input_nome" type="text">
+    <p>Qual o ki normal do guerreiro?</p>
+    <input id="input_ki" type="text"> <br><br>
+    <button onclick="ki()">Ver ki em cada forma</button>
+</body>
+</html>
+<script>
+    function ki() {
+    var ki = (input_ki.value)
+    var nome = (input_nome.value)
+    var multiplicacao = 50 * ki
+    var multiplicacao2 = 100 * ki
+    alert("O " + nome + " possui " + multiplicacao + " de ki em sua primeira forma" )
+    alert("O " + nome + " possui " + multiplicacao2 + " de ki em sua segunda forma") 
+    }
+</script>

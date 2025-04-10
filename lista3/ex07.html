@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saldo</title>
+</head>
+<body>
+
+    <div id="div_saldo">O saldo está em: 0</div>
+    
+    <button onclick="incrementar()">Receber 100</button>
+    <button onclick="decrementar()">Pagar 50</button>
+    
+</body>
+</html>
+
+<script>
+    var saldo = 0
+
+    function incrementar() {
+        saldo = saldo + 100
+        div_saldo.innerHTML = "O saldo está em: " + saldo
+        alert("Transferência de R$100 recebida! Saldo atual: R$" + saldo)
+    }
+
+    function decrementar() {
+        saldo = saldo - 50
+        div_saldo.innerHTML = "O saldo está em:" + saldo
+        alert("Pagamento de R$50 efetuado! Saldo atual: R$" + saldo)
+    }
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>candidato</title>
+</head>
+<body>
+    
+    Votos Candidato A <br>
+    <input id="input_votosA" type="text">
+    <br><br>
+    Votos Candidato B <br>
+    <input id="input_votosB" type="text">
+    <br><br>
+    Votos em branco <br>
+    <input id="input_branco" type="text">
+    <br><br>
+    Votos nulos <br>
+    <input id="input_nulos" type="text">
+    <br>
+    <button onclick="resultado()">Resultado da Eleição</button>
+
+    <div id="div_resultado">
+        <!--Total de votos: 200  
+
+    Candidato A: 40% (80 votos)  
+
+    Candidato B: 35% (70 votos)  
+
+    Inválidos: 25% (50 votos)  -->
+    </div>
+
+</body>
+</html>
+
+<script>
+    function resultado() {
+        var votoA = Number(input_votosA.value)
+        var votoB = Number(input_votosB.value)
+        var branco = Number(input_branco.value)
+        var nulos = Number(input_nulos.value)
+        var invalidos = branco + nulos
+        var total = votoA + votoB + invalidos
+        var porcentagemA  = (votoA / total) * 100
+        var porcentagemB  = (votoB / total) * 100
+        var porcentagemI  = (invalidos / total) * 100
+        div_resultado.innerHTML = `Total de votos: ${total} <br> 
+
+    Candidato A: ${porcentagemA}% (${votoA} votos) <br>  
+
+    Candidato B: ${porcentagemB}% (${votoB} votos)  <br>
+
+    Inválidos: ${porcentagemI}% (${invalidos} votos)  `
+    }
+</script>

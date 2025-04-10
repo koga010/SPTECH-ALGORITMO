@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>algoritmo</title>
+</head>
+<body>
+    
+    Quantidade de KWh consumida no mês <br>
+    <input id="input_kwh" type="text"> <br><br>
+    <button onclick="calcular()">Calcular conta de luz</button>
+
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var kwh = Number(input_kwh.value)
+        var calculo =  kwh * 0.85
+        var desconto = calculo * 0.10
+        var calculo_final = calculo - desconto
+
+        if(kwh < 100) { 
+            alert(`o valor a ser pago é ${calculo_final}`)
+        }
+        if(kwh >= 100) {
+            alert(`o valor a ser pago é ${calculo}`)
+        }
+    }
+</script>

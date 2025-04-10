@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frequencia</title>
+</head>
+<body>
+    Insira a frequência <br>
+    <input type="text" id="input_freq"> <br><br>
+    <button onclick="analisar()">Analisar frequência</button>
+
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    function analisar() {
+        var freq = Number(input_freq.value)
+
+        if(freq < 50) {
+            div_mensagem.innerHTML = `<img src="https://st3.depositphotos.com/12982378/35274/i/450/depositphotos_352740142-stock-photo-shocked-traveler-hat-backpack-holding.jpg" alt="">`
+        } else {
+            div_mensagem.innerHTML = `<img src="https://jornaldafronteira.com.br/wp-content/uploads/2024/02/jornal-cedro-img-38-1.png" alt="">`
+        }
+    }
+</script>

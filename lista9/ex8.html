@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papagaio Falante</title>
+</head>
+<body>
+    Insira um número <br>
+    <input type="text" id="input_numero"> <br>
+    Insira uma frase <br>
+    <input type="text" id="input_frase"> <br>
+    <button onclick="contar()">Papagaio</button>
+</body>
+</html>
+
+<script>
+    function contar() {
+        var numero = Number(input_numero.value)
+        var frase = input_frase.value
+        var contador = 0
+
+        var mensagem = ""
+        while (contador < numero) {
+            contador++
+            mensagem += `${frase}\n`
+            
+        }
+
+        while (contador < numero * 2) {
+            alert(mensagem)
+            contador++
+        } 
+    }
+</script>

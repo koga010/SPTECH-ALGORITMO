@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabuada</title>
+</head>
+<body>
+    
+    Insira um número para ver a tabuada <br>
+    <input id="input_n1" type="text"> <br>
+    <button onclick="tabuada()">Ver Tabuada</button>
+
+    <div id="div_tabuada">
+        <!-- n1 x 1 = tabuada1
+        n1 x 2 = tabuada2
+        n1 x 3 = tabuada3
+        n1 x 4 = tabuada4
+        n1 x 5 = tabuada5
+        n1 x 6 = tabuada6
+        n1 x 7 = tabuada7
+        n1 x 8 = tabuada8
+        n1 x 9 = tabuada9
+        -->
+    </div>
+
+</body>
+</html>
+
+<script>
+    var n1 = Number(input_n1.value)
+
+    function tabuada() {
+        var n1 = Number(input_n1.value)
+        var tabuada1 = n1 * 1
+        var tabuada2 = n1 * 2
+        var tabuada3 = n1 * 3
+        var tabuada4 = n1 * 4
+        var tabuada5 = n1 * 5
+        var tabuada6 = n1 * 6
+        var tabuada7 = n1 * 7
+        var tabuada8 = n1 * 8
+        var tabuada9 = n1 * 9
+        div_tabuada.innerHTML = `${n1} x 1 = ${tabuada1} <br>
+        ${n1} x 2 = ${tabuada2} <br>
+        ${n1} x 3 = ${tabuada3} <br>
+        ${n1} x 4 = ${tabuada4} <br>
+        ${n1} x 5 = ${tabuada5} <br>
+        ${n1} x 6 = ${tabuada6} <br>
+        ${n1} x 7 = ${tabuada7} <br>
+        ${n1} x 8 = ${tabuada8} <br>
+        ${n1} x 9 = ${tabuada9}`
+    }
+</script>

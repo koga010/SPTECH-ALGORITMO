@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>termico</title>
+</head>
+<body>
+    Insira a temperatura <br>
+    <input type="text" id="input_temp"> <br><br>
+    <button onclick="analisar()">Analisar clima</button>
+</body>
+</html>
+
+<script>
+    function analisar() {
+        var temp = input_temp.value
+
+        if (temp < 21 || temp > 24) {
+             alert("Alerta de desconforto!")
+             if (temp < 21) {
+            alert("As pessoas vão ter hipotermia")
+            } else if (temp > 24) {
+            alert("As pessoas vão derreter")
+            } 
+            } 
+    }
+</script>

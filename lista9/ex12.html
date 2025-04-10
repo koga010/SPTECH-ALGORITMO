@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um elefante, incomoda muita gente...</title>
+</head>
+<body>
+    Insira o nome da pessoa que o usuário mais ama na vida <br>
+    <input type="text" id="input_nome"> <br><br>
+    Insira o quanto o usuário a ama (um número inteiro) <br>
+    <input type="text" id="input_numero"> <br><br>
+    <button onclick="calcular()">Expressar amor</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var nome = input_nome.value
+        var numero = input_numero.value
+
+        div_mensagem.innerHTML = ``
+
+        var contador = 1
+        while(contador <= numero) {
+            div_mensagem.innerHTML += `${nome}, eu te amo! Sempre lembre disso!<br>`
+            contador++
+        }
+    }
+</script>

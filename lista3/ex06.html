@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+</head>
+<body>
+    <p>numero 1</p>
+   <input id="input_n1" type="text">
+   <br><br>
+   <p>numero 2</p>
+   <input id="input_n2" type="text">
+<br><br>
+   <button onclick="multiplicar()">multiplicar</button> 
+   <button onclick="dividir()">dividir</button> 
+   <button onclick="subtrair()">subtrair</button> 
+   <button onclick="somar()">somar</button> 
+</body>
+</html>
+<script>
+    function multiplicar() {
+        var n1 = input_n1.value
+        var n2 = input_n2.value
+        var multiplicacao = n1 * n2
+        alert("O produto entre " + n1 + " e " + n2 + " é " + multiplicacao)
+    }
+    function dividir() {
+        var n1 = input_n1.value
+        var n2 = input_n2.value
+        var dividir = n1 / n2
+        alert(" A razão entre " + n1 + " e " + n2 + " é " + dividir)
+    }
+    function subtrair() {
+        var n1 = Number(input_n1.value)
+        var n2 = Number(input_n2.value)
+        var subtrair = n1 - n2
+        alert("A diferença entre " + n1 + " e " + n2 + " é " + subtrair)
+    }
+    function somar() {
+        var n1 = Number(input_n1.value);
+        var n2 = Number(input_n2.value);
+        var soma = n1 + n2;
+        alert(" A soma entre " + n1 + " e " + n2 + " é " + soma);
+    }
+</script>

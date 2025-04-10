@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>times</title>
+</head>
+<body >
+    Qual time você torce? <br>
+    <input type="text" id="input_time"> <br>
+    <button onclick="fale()">Fale sobre esse time</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function fale() {
+        var time = input_time.value
+
+        if (time == "corinthians") {
+            div_mensagem.innerHTML = `<p style="background-color: black; color: white;">Salve o Corinthians</p>`
+        } else if (time == "palmeiras") {
+            div_mensagem.innerHTML = `<p style="background-color: green; color: white;">Salve o alviverde imponente</p>`
+        } else if (time == "santos") {
+            div_mensagem.innerHTML = `<p style="background-color: white; color: black;">Agora quem dá a bola é o Santos</p>`
+        } else if (time == "são paulo") {
+            div_mensagem.innerHTML = `<p style="background-color: black; color: red;">Salve o Tricolor paulista</p>`
+        }
+    }
+</script>

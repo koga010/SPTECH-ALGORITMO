@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sptech</title>
+</head>
+<body>
+    <p>Nota da avaliação continuada</p>
+    <input id="input_avaliacao" type="text">
+    <p>Nota da avaliação semestral</p>
+    <input id="input_semestral" type="">
+    <p>Insira seu nome</p>
+    <input id="input_nome" type="text">
+    <button onclick="média()">Calcular média</button>
+</body>
+</html>
+<script>
+    function média() {
+        var avaliacao = (input_avaliacao.value)
+        var semestral = (input_semestral.value)
+        var nome = (input_nome.value)
+        var  media = avaliacao * 0.4 + semestral * 0.6
+        alert("A média de " + nome + " será de " + media)
+    }
+</script>

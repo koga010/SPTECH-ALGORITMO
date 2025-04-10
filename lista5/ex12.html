@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>humor</title>
+</head>
+<body>
+    
+    Insira como você está se sentindo hoje <br>
+    <input type="text" id="input_humor"> <br><br>
+    <button onclick="mostrar()">Mostrar Humor</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function mostrar() {
+        var humor = input_humor.value
+
+        if (humor == `feliz`) {
+            div_mensagem.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdz8E2PfJJLnlL_X-ZqMmsNJUaHBD9eMvXyw&s" alt="">`
+        } else if (humor == `triste`) {
+            div_mensagem.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQkK7hdA_16pK55HFmMknd5sYCrUaT1NnXFQ&s" alt="">`
+        } else if (humor == `bravo`) {
+            div_mensagem.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6GdWWJQWiwjFIVPwL0tTuJ_H0vQfvCVatVw&s" alt="">`
+        } else if (humor == `surpreso`) {
+            div_mensagem.innerHTML = `<img src="https://images.emojiterra.com/google/android-11/512px/1f62f.png" alt="">`
+        } else if (humor == `sonolento`) {
+            div_mensagem.innerHTML = `<img src="https://img.freepik.com/vetores-premium/emoticon-de-alta-qualidade-emoji-dormindo-emoticon-roncando-zzz-rosto-amarelo-com-olhos-fechados-emoji-rosto-amarelo-elemento-popular_686498-2733.jpg?semt=ais_hybrid" alt="">`
+        }
+    }
+ </script>

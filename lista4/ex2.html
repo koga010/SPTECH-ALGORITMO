@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>refrigerante</title>
+</head>
+<body>
+    
+    Quantas latinhas de refrigerante por dia? <br>
+    <input id="input_latinha" type="text"> <br><br>
+    <button onclick="refri()">Quantos refris?</button>
+
+    <div id="div_lata">
+        <!--Você consome X latinhas de refrigerante por ano
+        Cuidado com a diabete!-->
+    </div>
+
+</body>
+</html>
+
+<script>
+    function refri() {
+        var lata = Number(input_latinha.value)
+        var calculo = lata * 365
+
+        if(calculo < 500) {
+            div_lata.innerHTML = `Você consome ${calculo} latinhas de refrigerante por ano`
+        }
+        if(calculo > 500) {
+            div_lata.innerHTML = `Você consome ${calculo} latinhas de refrigerante por ano <br> Cuidado com a diabetes!`
+        }
+    }
+</script>
