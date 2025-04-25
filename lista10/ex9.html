@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <h3>FizzBuzz</h3>
+    <p>Informe o número inicial</p>
+    <input type="number" id="input_numInicial">
+    <p>Informe o número final</p>
+    <input type="number" id="input_numFinal">
+    <br><br>
+    <button onclick="numero()">FizzBuzz</button>
+    <br><br>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function numero() {
+        var n1 = Number(input_numInicial.value);
+        var n2 = Number(input_numFinal.value);
+        var mensagem = "";
+
+        for(var contador = n1; contador <= n2; contador ++) {
+            if(contador % 3 == 0 && contador % 5 == 0) {
+                mensagem += `FizzBuzz<br>`
+            } else if (contador % 3 == 0) {
+                mensagem += `Fizz<br>`
+            } else if (contador % 5 == 0) {
+                mensagem += `Buzz<br>`
+            } else {
+                mensagem += `${contador}<br>`
+            }
+        }
+
+        div_mensagem.innerHTML = mensagem;
+    }
+</script>

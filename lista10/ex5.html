@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café</title>
+</head>
+<body>
+    <p>Quantas xícaras de café com leite você já bebeu na vida?</p>
+    <input type="number" id="input_qtd">
+    <br><br>
+    <button onclick="Cafe()">Ver a quantidade</button>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+    function Cafe() {
+        var qtdCafe = Number(input_qtd.value);
+        var mensagem = "";
+        var imagemCafé = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn1-_Atf_rCMIvZ5WZ-FlOMhATioX0AtKFaA&s" height="30px" width="30px">`
+        var imagemLeite = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYbsEXeZBYWKO-Yu3E5nF9QhNzKJv3YA_9vQ&s" height="40px" width="30px">`
+
+        for(var contador = 1; contador <= qtdCafe; contador++) {
+            mensagem += `${imagemCafé}${imagemCafé}${imagemLeite}`
+        }
+        
+        p_mensagem.innerHTML = mensagem;
+    }
+</script>

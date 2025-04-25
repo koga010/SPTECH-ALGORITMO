@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carona - Capacidade flexível</title>
+</head>
+<body>
+    <p>Quantas pessoas cabem no carro?</p>
+    <input type="number" id="input_limite">
+    <br>
+    <p>Quantas pessoas vão entrar no carro?</p>
+    <input type="number" id="input_qtdPessoas">
+    <br><br>
+    <button onclick="carona()">#Partiu Carona!</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+    function carona() {
+        var mensagem = "";
+        var limite = Number(input_limite.value);
+        var qtdPessoas = Number(input_qtdPessoas.value);
+
+        if (qtdPessoas > 0 && limite > 0) {
+            mensagem += `Entrou o 1º passageiro (motorista)<br>`
+
+            for(var contador = 2; contador <= qtdPessoas; contador ++){ 
+                if (contador <= limite) {     
+                    mensagem += `Entrou o ${contador}º passageiro<br>`    
+                } else {
+                    mensagem += `O ${contador}º passageiro terá que esperar!<br>`
+                }
+            }
+
+            p_mensagem.innerHTML = mensagem;
+        } else (
+            alert(`Informe quantidades válidas`)
+        )
+    }
+</script>

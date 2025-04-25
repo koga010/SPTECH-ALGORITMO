@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carona</title>
+</head>
+<body>
+    <p>Quantas pessoas vão entrar no carro?</p>
+    <input type="number" id="input_pessoas">
+    <br><br>
+    <button onclick="carona()">#Partiu Carona!</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+
+    function carona() {
+
+        var mensagem = "";
+        var limite = 5;
+        var pessoas = Number(input_pessoas.value);
+
+        if (pessoas > 0) {
+
+            mensagem += `Entrou o 1º passageiro (motorista)<br>`
+           
+            for(var contador = 2; contador <= pessoas; contador ++){
+                
+                if (contador <= limite) {
+                    
+                    mensagem += `Entrou o ${contador}º passageiro<br>`
+                    
+                } else {
+                
+                    mensagem += `O ${contador}º passageiro terá que esperar!<br>`
+
+                }
+                
+            }
+
+            p_mensagem.innerHTML = mensagem;
+            
+        }
+    }
+
+</script>

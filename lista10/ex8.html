@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poupança</title>
+</head>
+<body>
+    <p>Número de depósitos:</p>
+    <input type="number" id="input_qtdDepositos">
+    <p>Informe o valor dos depósitos:</p>
+    <input type="number" id="input_valor">
+    <br><br>
+    <button onclick="deposito()">Acompanhar grana</button>
+    <br><br>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+    function deposito() {
+        var qtdDepositos = Number(input_qtdDepositos.value);
+        var valor = Number(input_valor.value);
+        var poupanca = 0;
+        var mensagem = "";
+        var imagem = `<img src= "https://i.pinimg.com/474x/f6/4d/43/f64d43f07b715cb9dbe1f2d98b4da49d.jpg" height= "15px" width= "15px">` 
+
+        for (var contador = 1; contador <= qtdDepositos; contador ++) {
+            if(contador % 3 == 0) {
+                poupanca += valor;
+                poupanca += (poupanca*0.01);   
+                mensagem += `${contador}º mês: R$${poupanca.toFixed(2)} ${imagem}<br><br>`;
+            } else {
+                poupanca += valor;
+                mensagem += `${contador}º mês: R$${poupanca.toFixed(2)}<br><br>`;
+            }
+        }
+        mensagem += `Total guardado: R$${poupanca.toFixed(2)}`
+
+        p_mensagem.innerHTML = mensagem;
+
+    }
+</script>

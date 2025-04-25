@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coca-Cola</title>
+</head>
+<body>
+    <p>Quantas latinhas de Coca-Cola você acha que bebeu na vida?</p>
+    <input type="number" id="input_qtd">
+    <br><br>
+    <button onclick="latinhas()">Ver a quantidade</button>
+    <p id="p_mensagem"></p>
+</body>
+</html>
+<script>
+    function latinhas() {
+        var qtdLatinhas = Number(input_qtd.value);
+        var mensagem = "";
+        var imagem = `<img src="https://andinacocacola.vtexassets.com/arquivos/ids/158606/SKUs-Ecommerce--1000-x-1000-px---8-.jpg?v=638705724669430000" height="30px" width="30px">`
+
+        for(var contador = 1; contador <= qtdLatinhas; contador++) {
+            mensagem += `${imagem}`
+        }
+    
+        p_mensagem.innerHTML = mensagem;
+    }
+</script>
