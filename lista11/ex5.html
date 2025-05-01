@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="jogar()">Jogar</button>
+    <div id="div_mensagem"></div>
+    
+    
+    
+</body>
+</html>
+
+<script>
+    var pontosJ1 = 0;
+    var pontosJ2 = 0;
+  
+    function jogar() {
+      var aleatorio = Math.random();
+  
+      var player1 = Math.floor(Math.random() * 3 + 1);
+      var player2 = parseInt(Math.random() * 3 + 1);
+  
+      if (player1 == 1) {
+        div_mensagem.innerHTML = `Jogador 1: <img style="height: 200px;" src="https://wesraiuga.github.io/games/assets/img/jokenpo/jokenpo-cpu-pedra.png" alt="">`;
+      } else if (player1 == 2) {
+        div_mensagem.innerHTML = `Jogador 1: <img style="height: 200px;" src="https://jokenpo-three-sage.vercel.app/src/img/papel.png" alt="">`;
+      } else if (player1 == 3) {
+        div_mensagem.innerHTML = `Jogador 1: <img style="height: 200px;" src="https://jokenpo-three-sage.vercel.app/src/img/tesoura.png" alt="">`;
+      }
+  
+      if (player2 == 1) {
+        div_mensagem.innerHTML += `VS. Jogador 2:  <img style="height: 200px;" src="https://wesraiuga.github.io/games/assets/img/jokenpo/jokenpo-cpu-pedra.png" alt="">`;
+      } else if (player2 == 2) {
+        div_mensagem.innerHTML += `VS. Jogador 2: <img style="height: 200px;" src="https://jokenpo-three-sage.vercel.app/src/img/papel.png" alt="">`;
+      } else if (player2 == 3) {
+        div_mensagem.innerHTML += `VS. Jogador 2: <img style="height: 200px;" src="https://jokenpo-three-sage.vercel.app/src/img/tesoura.png" alt=""> `;
+      }
+  
+      if (
+        (player1 == 1 && player2 == 3) ||
+        (player1 == 2 && player2 == 1) ||
+        (player1 == 3 && player2 == 2)
+      ) {
+        div_mensagem.innerHTML += `<br><br>Jogador 1 venceu!`;
+        pontosJ1++;
+      } else if (
+        (player2 == 1 && player1 == 3) ||
+        (player2 == 2 && player1 == 1) ||
+        (player2 == 3 && player1 == 2)
+      ) {
+        div_mensagem.innerHTML += `<br><br>Jogador 2 venceu!`;
+        pontosJ2++;
+      } else {
+          div_mensagem.innerHTML += `<br><br> Empatou!`;
+      }
+  
+      div_mensagem.innerHTML += ` 
+          <br>Jogador 1: ${pontosJ1} vitória(s) 
+          <br>Jogador 2: ${pontosJ2} vitória(s) 
+      `
+    }
+  </script>
+  

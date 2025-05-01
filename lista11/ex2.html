@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="contar()">Sortear time</button>
+    <div id="div_mensagem"></div>
+    <img src="" alt="">
+</body>
+</html>
+
+<script>
+    function contar() {
+        var aleatorio = Math.random()
+
+        if(aleatorio > 0.74){
+            div_mensagem.innerHTML = `<img style= "height: 150px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Brasao_do_Sao_Paulo_Futebol_Clube.svg/250px-Brasao_do_Sao_Paulo_Futebol_Clube.svg.png" alt="">`
+        } else if (aleatorio > 0.49) {
+            div_mensagem.innerHTML = `<img style= "height: 150px" src="https://m.media-amazon.com/images/I/71OXNaROvcL._AC_UF894,1000_QL80_.jpg" alt="">`
+        } else if (aleatorio > 0.24) {
+            div_mensagem.innerHTML = `<img style= "height: 150px" src="https://upload.wikimedia.org/wikipedia/commons/1/15/Santos_Logo.png" alt="">`
+        } else {
+            div_mensagem.innerHTML = `<img style= "height: 150px" src="https://images.mantosdofutebol.com.br/wp-content/uploads/2024/10/escudo-Corinthians.png" alt="">`
+        }
+    }
+</script>
