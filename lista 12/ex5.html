@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Favoritos: Seus Filmes em Destaque</title>
+</head>
+<body>
+    Insira os nomes de seus filmes favoritos <br>
+    <input type="text" id="input_filmes"> <br>
+    <button onclick="cadastrar()">Cadastrar Filme</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    var lista_filmes = []
+
+    function cadastrar(){
+        var filmes = input_filmes.value
+        var total = lista_filmes.length + 1
+
+        lista_filmes.push(filmes)
+
+        if(lista_filmes[2] == undefined){
+            div_mensagem.innerHTML = `Seu filme favorito: ${lista_filmes[0]} <br>
+        Seu 3º filme favorito: ainsa não existe <br> 
+        Total de filmes cadastrados: ${total} `
+        } else {
+            div_mensagem.innerHTML = `Seu filme favorito: ${lista_filmes[0]} <br>
+        Seu 3º filme favorito: ${lista_filmes[2]} <br> 
+        Total de filmes cadastrados: ${total} `
+        }
+        
+    }
+</script>

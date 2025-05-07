@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Filmes Favoritos: Do Mais Amado ao Menos</title>
+</head>
+<body>
+    Insira o nome do filme que você mais gosta  começando pelo seu favorito e depois o segundo que mais gosta e assim por diante <br>
+    <input type="text" id="input_filme"> <br>
+    <button onclick="cadastrar()">Cadastrar filme</button> <br><br>
+
+    <button onclick="ver()">Ver favoritos</button> 
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    var lista_filmes = []
+
+    function cadastrar(){
+        var filme = input_filme.value
+
+        lista_filmes.push(filme)
+    }
+
+    function ver(){
+        div_mensagem.innerHTML = `${lista_filmes} <br>`
+
+        var total = lista_filmes.length
+
+        div_mensagem.innerHTML += `total: ${total} <br>`
+
+        div_mensagem.innerHTML += ` O que filme que mais gosta é ${lista_filmes[1]}. <br>
+                                E desses, o que menos gosta é ${lista_filmes[lista_filmes.length - 1]} `
+    }
+</script>
