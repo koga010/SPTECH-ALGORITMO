@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Número:
+    <input type="text" id="input_numero">
+    <button onclick="analisar()">Analisar histórico</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    var lista = []
+    function analisar(){
+        var numero = Number(input_numero.value)
+        div_mensagem.innerHTML = 0
+
+        lista.push(numero)
+
+        var i = 0
+        var maior = lista[0]
+        var menor = lista[0]
+
+        for(var i = 0; i < lista.length; i++){
+            var numero_atual = lista[i]
+
+            if(numero_atual > maior){
+                maior = numero_atual
+            } else if (numero_atual < menor){
+                menor = numero_atual
+            }
+
+            div_mensagem.innerHTML += `${i+1}º Número: ${numero_atual}<br>`
+
+            div_mensagem.innerHTML += `Maior: ${maior}<br>
+                                        Menor: ${menor}`
+        }
+
+        
+    }
+</script>

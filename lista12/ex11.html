@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque de Produtos com Cálculo de Valor Total</title>
+</head>
+<body>
+    Insira o preço de um produto 
+    <input type="number" id="input_produto"> <br>
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <button onclick="atualizar()">Atualizar Estoque</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    var lista = []
+
+    function cadastrar(){
+        var produto = input_produto.value
+
+        lista.push(produto)
+    }
+    function atualizar(){
+        var total = lista.length
+        var produto = Number(input_produto)
+        var y = i * produto
+
+        for(var i = lista.length; i > 0; i--){
+            div_mensagem.innerHTML += `${lista[i-1]}<br>`
+        } 
+        div_mensagem.innerHTML += `Você tem ${total} produtos cadastrados em estoque <br> Seu estoque vale R$${y}`
+
+    } 
+</script>
